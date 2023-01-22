@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <style type="text/css">
+        .form{
+            width: 78px;
+        }
+        </style>
+   
+</head>
+<body>
+    <form>        <!--form tag is used to create form with user input-->
+       <fieldset>   <!--used to group several control as well as labels with in the web form-->
+
+        <legend>Login form</legend>     <!-- defined the tityle of the child content-->
+            <div>
+       
+    <label>User name :</label><br>  
+    <input type="Email id" name=" " id="NAME"/>
+    <div class="clear"></div>
+</div>
+<div>
+    <label>Password :</label><br>
+    <input type="password" name=" " id="password"/>  <!-- when we write the password then we used type  pssword which is enter by the user or that is hidden enter-->
+    <div class="clear"></div>
+</div>
+<br>
+    <div> 
+        <button type="click()">Log In</button> 
+        <button style="width: 150px;" type="button" onclick="toggle(this)"><span>Show password</span></button>
+        </div>
+       </fieldset>
+    </form>
+    </div>
+</body>
+<script type="text/javascript">
+    var password=document.getElementById('password');  //this is take pass for the tag
+    function toggle(elem){
+        var type=password.getAttribute('type');  //
+        if(type=='password'){  // if type is equal to te passwordd
+            password.setAttribute('type','text');
+    elem.innerText = "hide password";  // dot password convert into the show [password]
+        }else{
+    password.setAttribute('type','password');  //type is not password then we will hide that password
+    elem.innerText = "show password";
+    }
+}
+
+</script>
+</html>
